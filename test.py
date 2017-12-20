@@ -1,7 +1,7 @@
 
 from sklearn.externals import joblib
 from sklearn.metrics import recall_score, precision_score, confusion_matrix
-import buid_dataset
+import build_dataset
 
 
 def metrics(y, y_pred):
@@ -24,8 +24,8 @@ def metrics(y, y_pred):
 
 
 print("Data set is building...")
-X_train, y_train = buid_dataset.run("Data/processed-training-data/", "Data/training-class")
-X_test, y_test = buid_dataset.run("Data/processed-test-data/", "Data/test-class")
+X_train, y_train = build_dataset.run("Data/processed-training-data/", "Data/training-class")
+X_test, y_test = build_dataset.run("Data/processed-test-data/", "Data/test-class")
 loaded_model = joblib.load('Models/svm.pkl')
 y_test_pred = loaded_model.predict(X_test[0:])
 y_train_pred = loaded_model.predict(X_train[0:])
