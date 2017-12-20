@@ -1,4 +1,4 @@
-gensim==3.2.0
+gensim==0.12.4
 sklearn
 nltk
 bs4
