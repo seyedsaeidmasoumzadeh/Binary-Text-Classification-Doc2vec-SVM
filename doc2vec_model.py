@@ -17,7 +17,7 @@ def run():
     print ("-----Doc2vec Training Started----")
     for epoch in range(10):
         print("epoch is: " + str(epoch))
-        model.train(it,total_examples= model.corpus_count,epochs= model.iter)
+        model.train(it)
         model.alpha -= 0.0025   # decrease the learning rate
         model.min_alpha = model.alpha   # fix the learning rate, no deca
 
